@@ -28,6 +28,15 @@ public class Lesson5 {
                 
                 -D
                 Shortcut for --delete --force.
+                
+        
+        git branch --merged     
+            --merged [<commit>]
+                Only list branches whose tips are reachable from the specified commit
+                
+        git branch --no-merged 
+            --no-merged [<commit>]
+                Only list branches whose tips are not reachable from the specified commit      
 
      */
 }
