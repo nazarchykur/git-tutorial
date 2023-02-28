@@ -2,6 +2,20 @@ package com.example.gittutorial.lesson6;
 
 public class Lesson6 {
     /*
+    
+        git merge        
+                    	  A---B---C topic
+                         /
+                        D---E---F---G master
+            
+            Then "git merge topic" will replay the changes made on the topic branch since it diverged from master (i.e., E) 
+            until its current commit (C) on top of master, and record the result in a new commit along with the names of 
+            the two parent commits and a log message from the user describing the changes.
+                     
+                      A---B---C topic
+                     /         \
+                    D---E---F---G---H master
+                    
         git rebase
         
             Rebasing is the process of moving or combining a sequence of commits to a new base commit. 
