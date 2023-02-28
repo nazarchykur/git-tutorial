@@ -13,7 +13,7 @@ public class Lesson3 {
     
     
     
-    /*
+    /* 
                 
         git reset     
             git reset [<mode>] [<commit>]  : This form resets the current branch head to <commit> and possibly updates the index  
@@ -33,6 +33,36 @@ public class Lesson3 {
                 
                 
             git reset -- .  - remove from staged area
-
+     */
+    
+    /*
+    
+    також можна використовувати замість commit ID (hash) переміщення за допомогою HEAD
+    
+    => якщо ми виконали зміни і ці зміни ще не додавали до Stage area (не виконали git add .) (git status => файли червоні), то 
+        git checkout -- .          : видалить всі ці зміни з цієї Unstaged area     \
+        git checkout -- <filename> : видалить конкретний файл з Unstaged area       /  git status тепер нічого не покаже
+    
+    
+    => якщо ми добавили якісь зміни і вже додали їх до Stage area (виконали git add .): 
+    
+        git reset .        : зміни які були зроблені і додані до Stage area (файли зелені) тепер будуть у Unstaged area (файли червоні)  
+   
+    => якщо потрібно повернутися до змін з уже виконаними комітами:
+          
+        git reset --mixed [<commit ID> | <HEAD>...] : (--mixed = default) поверне зміни до цього коміту, а зміни, які були
+                                                    у комітах вище додасть до Unstaged area (git status => файли червоні)    
+                                                             
+        git reset --soft [<commit ID> | <HEAD>...] : поверне зміни до цього коміту, а зміни, які були у комітах вище 
+                                                     додасть до Stage area (git status => файли зелені)
+                                                     
+        git reset --hard [<commit ID> | <HEAD>...] : поверне зміни до цього коміту, а зміни, які були у комітах вище 
+                                                     будуть видалені і git status уже нічого не покаже
+        
+        git reset --hard HEAD       (going back to HEAD)          
+        git reset --hard HEAD^      (going back to the commit before HEAD)   
+        git reset --hard HEAD~1     (equivalent to "^")       
+        git reset --hard HEAD~2     (going back two commits before HEAD)
+            
      */
 }
