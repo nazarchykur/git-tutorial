@@ -73,4 +73,69 @@ public class Lesson6 {
                 saved to the stash list.
 
      */
+    
+    /*
+        What git merge do:
+            > Wouldn't change the commit timestamp
+            > Wouldn't change the commit hash
+            > Will create a new commit automatically
+            > When there are many people are using the git merge in a project, it will cause commits across each other 
+                in history, in the end it will show the commits like a Circuit board.
+     */   
+//                        |
+//                        +
+//                        | \
+//                        |  \
+//                        +   +
+//                        + \/
+//                        |\/\
+//                        |/+ |
+//                        + | +
+//                        | + /
+//                        |/ /  
+//                        + / 
+//                        +
+//                        | 
+    
+     /*   
+            How to do git merge:
+                Step 1: git checkout feature . For example, git checkout feature/new_awesome_feature1.
+                Step 2: git merge master , might need to resolve some conflicts while doing this step.
+
+
+
+        What git rebase do:
+            > Change the commit timestamp
+            > Change the commit hash
+            > Not introduce any new commit automatically
+            > Generate nice and organised git history, like the one in the following:
+      */
+//                        +
+//                        |\    
+//                        | +
+//                        |/
+//                        +
+//                        | 
+//                        +
+//                        |\
+//                        | +
+//                        |/
+//                        +
+//                        | \ 
+//                        |  +
+//                        |  + 
+//                        | / 
+//                        +
+//                        | 
+    
+    
+     /*
+            
+            How to do git rebase:
+                Step 1: git checkout feature
+                Step 2: git rebase master , might need to resolve some conflicts while doing this step. Here we might 
+                        rebase the code multiple times. So it is a good idea to squash all the commits into one.
+
+
+     */
 }
